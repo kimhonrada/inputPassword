@@ -14,7 +14,7 @@ const PasswordInput = () => {
 
   return (
     <div className="password-container">
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <label>
           <div>Password</div>
           <input
