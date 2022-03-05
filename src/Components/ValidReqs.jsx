@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
-const ValidReqs = () => {
+const ValidReqs = ({ requirements }) => {
+
   return (
     <div className="valid-reqs-container">
       <ul className="valid-reqs">
-        <li>8 - 72 Characters</li>
-        <li>1 Lowercase Character</li>
-        <li>Should Not Match Your Email Address</li>
-        <li>1 Uppercase Character</li>
-        <li>1 Number</li>
+        <li className={requirements.length}>8 - 72 Characters</li>
+        <li className={'not-valid'}>1 Lowercase Character</li>
+        <li className={'not-valid'}>Should Not Match Your Email Address</li>
+        <li className={'not-valid'}>1 Uppercase Character</li>
+        <li className={'not-valid'}>1 Number</li>
       </ul>
-    </div>
+    </div >
   )
 }
 
