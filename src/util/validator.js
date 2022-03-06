@@ -1,10 +1,4 @@
-import axios from "axios";
-
-axios("https://run.mocky.io/v3/09e642b5-b52f-43c1-837b-8ebf70c10813")
-  .then(({ data }) => {
-    data.user.email;
-  })
-  .catch((err) => console.log(err));
+// all validation function
 
 export const checkLength = (passwordToCheck) => {
   if (passwordToCheck.length >= 8 && passwordToCheck.length <= 72) {
@@ -45,7 +39,10 @@ export const checkUppercase = (passwordToCheck) => {
 };
 
 export const checkEmail = (passwordToCheck, email) => {
-  if (!email.includes(passwordToCheck)) {
+  const splitEmail = email.split("@");
+  // const uppercasedEmail = splitEmail[0].toUpperCase();
+
+  if (!passwordToCheck.includes(splitEmail[0])) {
     return true;
   } else {
     return false;
