@@ -7,7 +7,7 @@ const ValidReqs = ({ length, number, lowercase, uppercase, email }) => {
       <ul className="valid-reqs">
         <li className={length}>8 - 72 Characters</li>
         <li className={lowercase}>1 Lowercase Character</li>
-        <li className={'not-valid'}>Should Not Match Your Email Address</li>
+        <li className={email}>Should Not Match Your Email Address</li>
         <li className={uppercase}>1 Uppercase Character</li>
         <li className={number}>1 Number</li>
       </ul>

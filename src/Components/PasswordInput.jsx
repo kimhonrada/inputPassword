@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ValidReqs from './ValidReqs.jsx'
-import { checkLength, checkNumber, checkLowercase, checkUppercase } from '../util/validator.js'
+import { checkLength, checkNumber, checkLowercase, checkUppercase, checkEmail } from '../util/validator.js'
 
-const PasswordInput = () => {
+const PasswordInput = ({ emailToCheck }) => {
 
   const [show, setShow] = useState('password')
   const [length, setLength] = useState('not-valid')
@@ -17,6 +17,7 @@ const PasswordInput = () => {
     checkNumber(e.target.value) ? setNumber('valid') : setNumber('not-valid')
     checkLowercase(e.target.value) ? setLowercase('valid') : setLowercase('not-valid')
     checkUppercase(e.target.value) ? setUppercase('valid') : setUppercase('not-valid')
+    checkEmail(e.target.value, emailToCheck) ? setEmail('valid') : setEmail('not-valid')
   }
 
   const showPassword = () => {
@@ -45,27 +46,3 @@ const PasswordInput = () => {
 }
 
 export default PasswordInput;
-
-/**
- const handleChange = (e) => {
-    if (checkLength(e.target.value) === 'validLength') {
-      setRequirements({
-        length: 'valid'
-      })
-    } else {
-      setRequirements({
-        length: 'not-valid'
-      })
-    }
-
-    if (checkNumber(e.target.value) === 'validNumber') {
-      setRequirements({
-        number: 'valid'
-      })
-    } else {
-      setRequirements({
-        number: 'not-valid'
-      })
-    }
-  }
- */

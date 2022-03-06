@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PasswordInput from './Components/PasswordInput.jsx'
 import ValidReqs from './Components/ValidReqs.jsx'
+import axios from 'axios'
 
 
 const App = () => {
+
+  const [email, setEmail] = useState('')
+
+  useEffect(() => {
+    axios("https://run.mocky.io/v3/09e642b5-b52f-43c1-837b-8ebf70c10813")
+      .then(({ data }) => {
+        setEmail(data.user.email)
+      })
+      .catch((err) => console.log(err));
+  })
+
   return (
     <div className="container">
       <h1>Password Input Field with Validator</h1>
-      <PasswordInput />
+      <PasswordInput emailToCheck={email} />
     </div>
   )
 };
