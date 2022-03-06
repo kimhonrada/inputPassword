@@ -9,7 +9,7 @@ const ValidReqs = ({ requirements }) => {
         <li className={'not-valid'}>1 Lowercase Character</li>
         <li className={'not-valid'}>Should Not Match Your Email Address</li>
         <li className={'not-valid'}>1 Uppercase Character</li>
-        <li className={'not-valid'}>1 Number</li>
+        <li className={requirements.number}>1 Number</li>
       </ul>
     </div >
   )

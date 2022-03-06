@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ValidReqs from './ValidReqs.jsx'
-import validator from '../util/validator.js'
+import { checkLength, checkNumber } from '../util/validator.js'
 
 const PasswordInput = () => {
 
@@ -14,13 +14,23 @@ const PasswordInput = () => {
   })
 
   const handleChange = (e) => {
-    if (validator(e.target.value) === 'validLength') {
+    if (checkLength(e.target.value) === 'validLength') {
       setRequirements({
         length: 'valid'
       })
     } else {
       setRequirements({
         length: 'not-valid'
+      })
+    }
+
+    if (checkNumber(e.target.value) === 'validNumber') {
+      setRequirements({
+        number: 'valid'
+      })
+    } else {
+      setRequirements({
+        number: 'not-valid'
       })
     }
   }
