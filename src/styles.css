@@ -12,31 +12,31 @@ span {
 .container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 70%;
+  width: 100%;
   max-width: 1200px;
-  min-width: 500px;
+  min-width: 400px;
 }
 
 .password-container {
   display: flex;
   flex-direction: column;
-  min-width: 450px;
+  width: 100%;
+  min-width: 400px;
   max-width: 600px;
 }
 
 .password-form {
   display: flex;
-  align-items: stretch;
-  border: 1px solid black;
-  border-radius: 3px;
+  width: 100%;
+  border: 1px solid rgb(145, 143, 143);
+  border-radius: 4px;
   background-color: none;
   height: 35px;
   margin: 3px;
 }
 
 .password-field {
-  border: 0px solid black;
+  border: 0px solid rgb(145, 143, 143);
   border-radius: 3px;
   background-color: none;
   width: 85%;
@@ -48,7 +48,7 @@ span {
   justify-content: center;
   width: 15%;
   background-color: #f8f8f8;
-  border-left: 1px solid black;
+  border-left: 1px solid rgb(145, 143, 143);
   font-size: 15px;
 }
 
