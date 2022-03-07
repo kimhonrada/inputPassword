@@ -42,7 +42,7 @@ export const checkEmail = (passwordToCheck, email) => {
   const splitEmail = email.split("@");
   // const uppercasedEmail = splitEmail[0].toUpperCase();
 
-  if (!passwordToCheck.includes(splitEmail[0])) {
+  if (!passwordToCheck.toLowerCase().includes(splitEmail[0])) {
     return true;
   } else {
     return false;
