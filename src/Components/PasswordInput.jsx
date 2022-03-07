@@ -43,8 +43,14 @@ const PasswordInput = ({ emailToCheck }) => {
         </div>
       </form>
       <div>
-        <ValidReqs length={length} lowercase={lowercase} uppercase={uppercase} number={number} email={email} />
+        <ValidReqs
+          length={length}
+          lowercase={lowercase}
+          uppercase={uppercase}
+          number={number}
+          email={email} />
       </div>
+
     </div>
   )
 }

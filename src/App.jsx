@@ -17,9 +17,11 @@ const App = () => {
   })
 
   return (
-    <div className="container">
-      <PasswordInput emailToCheck={email} />
-    </div>
+    <>
+      <div className="container">
+        <PasswordInput emailToCheck={email} />
+      </div>
+    </>
   )
 };
 
