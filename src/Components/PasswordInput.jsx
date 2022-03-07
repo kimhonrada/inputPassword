@@ -13,6 +13,7 @@ const PasswordInput = ({ emailToCheck }) => {
 
 
   const handleChange = (e) => {
+    // input password goes through validation rules
     checkLength(e.target.value) ? setLength('valid') : setLength('invalid')
     checkNumber(e.target.value) ? setNumber('valid') : setNumber('invalid')
     checkLowercase(e.target.value) ? setLowercase('valid') : setLowercase('invalid')
