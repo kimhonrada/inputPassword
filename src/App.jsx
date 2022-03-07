@@ -7,7 +7,7 @@ const App = () => {
 
   const [email, setEmail] = useState('')
 
-  // retrieve email from API
+  // retrieve email from API on render
   useEffect(() => {
     axios("https://run.mocky.io/v3/09e642b5-b52f-43c1-837b-8ebf70c10813")
       .then(({ data }) => {

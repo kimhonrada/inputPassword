@@ -5,19 +5,19 @@ import { checkLength, checkNumber, checkLowercase, checkUppercase, checkEmail } 
 const PasswordInput = ({ emailToCheck }) => {
 
   const [show, setShow] = useState('password')
-  const [length, setLength] = useState('not-valid')
-  const [lowercase, setLowercase] = useState('not-valid')
-  const [uppercase, setUppercase] = useState('not-valid')
-  const [number, setNumber] = useState('not-valid')
-  const [email, setEmail] = useState('not-valid')
+  const [length, setLength] = useState('invalid')
+  const [lowercase, setLowercase] = useState('invalid')
+  const [uppercase, setUppercase] = useState('invalid')
+  const [number, setNumber] = useState('invalid')
+  const [email, setEmail] = useState('invalid')
 
 
   const handleChange = (e) => {
-    checkLength(e.target.value) ? setLength('valid') : setLength('not-valid')
-    checkNumber(e.target.value) ? setNumber('valid') : setNumber('not-valid')
-    checkLowercase(e.target.value) ? setLowercase('valid') : setLowercase('not-valid')
-    checkUppercase(e.target.value) ? setUppercase('valid') : setUppercase('not-valid')
-    checkEmail(e.target.value, emailToCheck) ? setEmail('valid') : setEmail('not-valid')
+    checkLength(e.target.value) ? setLength('valid') : setLength('invalid')
+    checkNumber(e.target.value) ? setNumber('valid') : setNumber('invalid')
+    checkLowercase(e.target.value) ? setLowercase('valid') : setLowercase('invalid')
+    checkUppercase(e.target.value) ? setUppercase('valid') : setUppercase('invalid')
+    checkEmail(e.target.value, emailToCheck) ? setEmail('valid') : setEmail('invalid')
   }
 
   const showPassword = () => {
