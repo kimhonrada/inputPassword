@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Password Input Field with Validator</h1>
       <PasswordInput emailToCheck={email} />
     </div>
   )

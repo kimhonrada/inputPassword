@@ -26,19 +26,23 @@ const PasswordInput = ({ emailToCheck }) => {
 
   return (
     <div className="password-container">
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label>
-          <div>Password</div>
-          <input
-            type={show}
-            name="password"
-            placeholder="Enter your password"
-            onChange={(e) => { handleChange(e) }}
-          />
-          <input type="checkbox" onClick={() => showPassword()} />Show
-        </label>
+      <span>Password</span>
+      <form className='password-form' onSubmit={(e) => e.preventDefault()}>
+        <input
+          className='password-field'
+          type={show}
+          name="password"
+          placeholder="Enter your password"
+          onChange={(e) => { handleChange(e) }}
+        />
+        <div className='password-show'>
+          <label for="show">
+            <input type="checkbox" id='show' onClick={() => showPassword()} />
+            Show
+          </label>
+        </div>
       </form>
-      <div className="required-list">
+      <div>
         <ValidReqs length={length} lowercase={lowercase} uppercase={uppercase} number={number} email={email} />
       </div>
     </div>
